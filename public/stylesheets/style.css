@@ -1,0 +1,456 @@
+html {
+
+    box-sizing: border-box;
+    
+    height: 100%;
+    
+    overflow: hidden;
+    
+    min-height: 100%;
+    
+    background: rgba(45,45,45,1);
+    
+    }
+    
+    
+    *,
+    
+    *:after,
+    
+    *:before {
+    
+    box-sizing: inherit;
+    
+    background: rgba(45,45,45,1);
+    
+    }
+    
+          
+    
+    * {
+    
+    // border: 1px solid snow;
+    
+    margin: 0;
+    
+    padding: 0;
+    
+    overflow: hidden;
+    
+    }
+    
+    
+    
+    body {
+    
+    perspective: 600px;
+    
+    transform-style: preserve-3d;
+    
+    transform-origin: center center 0;
+    
+    overflow-y: scroll;
+    
+    overflow-x: hidden;
+    
+    height: 100%;
+    
+    background: rgba(45,45,45,1);
+    
+    color: #e4e1dc;
+    
+    font-family: AvenirNext-DemiBold;
+    
+    }
+    
+    
+    header, footer {
+    
+    width: 100%;
+    
+    height: 50px;
+    
+    position: fixed;
+    
+    background: transparent;
+    
+    }
+    
+    
+    header {
+    
+    z-index: 11;
+    
+    top: 0;
+    
+    }
+    
+    
+    footer {
+    
+    bottom: 0;
+    
+    border-top: 1px solid rgba(255,255,255,.1);
+    
+    }
+    
+    
+    
+    #hiddenMenu {
+    
+    color: rgba(45,45,45,1);
+    
+    position: fixed;
+    
+    z-index: 10;
+    
+    width: 100vw;
+    
+    height: 100vh;
+    
+    background: snow;
+    
+    transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    
+    padding: 140px 0 0 20px;
+    
+    }
+    
+    
+    
+    .hiddenMenu {
+    
+    left: -100vw;
+    
+    }
+    
+    
+    .hiddenMenuItem {
+    
+    position: relative;
+    
+    background: snow;
+    
+    font-size: 1.7rem;
+    
+    font-family: AvenirNext-Regular;
+    
+    margin: 20px 0;
+    
+    overflow: hidden;
+    
+    width: 100%;
+    
+    height: 30px;
+    
+    //opacity: 0;
+    
+    padding-top: 30px;
+    
+    transition: all .8s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    
+    }
+    
+    
+    .hiddenMenuItem:hover {
+    
+    color: #3d73b3;
+    
+    //transition: color .3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    
+    }
+    
+    
+    .heightAuto {
+    
+    padding-top: 0;
+    
+    //opacity: 1;
+    
+    }
+    
+    
+    .openedMenu {
+    
+    left: 0;
+    
+    }
+    
+    
+    #hiddenList {
+    
+    color: rgba(45,45,45,1);
+    
+    position: fixed;
+    
+    z-index: 10;
+    
+    width: 100vw;
+    
+    min-height: 100vh;
+    
+    background: #e4e1dc;
+    
+    transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    
+    padding: 30px;
+    
+    }
+    
+    
+    #hiddenList > center {
+    
+    font-size: 3rem;
+    
+    }
+    
+    
+    #hiddenList > * {
+    
+    background: #e4e1dc;
+    
+    text-align: center;
+    
+    }
+    
+    
+    
+    .hiddenList {
+    
+    left: 100vw;
+    
+    }
+    
+    
+    .openedList {
+    
+    left: 0;
+    
+    }
+    
+    
+    
+    
+    
+    #sandwich {
+    
+    position: relative;
+    
+    height: 20px;
+    
+    width: 30px;
+    
+    margin: 10px 10px;
+    
+    display: inline-block;
+    
+    background: transparent;
+    
+    }
+    
+    
+    .sandwich {
+    
+    position: absolute;
+    
+    background: #e4e1dc;
+    
+    width: 100%;
+    
+    height: 2px;
+    
+    left: 0;
+    
+    transform-origin: left;
+    
+    transition: all .3s linear;
+    
+    border-radius: 1px;
+    
+    }
+    
+    
+    .sandwichTop {
+    
+    top: 0;
+    
+    }
+    
+    
+    .sandwichMiddle {
+    
+    top: 50%;
+    
+    transform: translateY(-50%);
+    
+    }
+    
+    
+    .sandwichBottom {
+    
+    bottom: 0;
+    
+    }
+    
+    
+    
+    .sandwichTopOpened {
+    
+    transform: rotate(45deg);
+    
+    width: 85%;
+    
+    background: rgba(45,45,45,1);
+    
+    }
+    
+    
+    .sandwichMiddleOpened {
+    
+    opacity: 0;
+    
+    width: 0;
+    
+    background: rgba(45,45,45,1);
+    
+    }
+    
+    
+    .sandwichBottomOpened {
+    
+    transform: rotate(-45deg);
+    
+    width: 85%;
+    
+    background: rgba(45,45,45,1);
+    
+    }
+    
+    
+    
+    #logo {
+    
+    background: transparent;
+    
+    font-size: 1.5rem;
+    
+    font-family: OriyaSangamMN-Bold;
+    
+    position: absolute;
+    
+    display: inline-block;
+    
+    right: 0;
+    
+    top: 50%;
+    
+    margin-right: 10px;
+    
+    transform: translateY(-50%);
+    
+    }
+    
+    
+    #container {
+    
+    width: 100%;
+    
+    //background: green;
+    
+    position: absolute;
+    
+    padding: 400px 0 120px 0;
+    
+    z-index: -1;
+    
+    top: 0;
+    
+    }
+    
+    
+    .personDiv {
+    
+    padding: 30px 0;
+    
+    margin: 25px 0;
+    
+    filter: blur(8px);
+    
+    text-align: center;
+    
+    position: relative;
+    
+    //border: 1px solid snow;
+    
+    width: 90%;
+    
+    font-size: 2.3rem;
+    
+    top: 50%;
+    
+    left: 50%;
+    
+    background: transparent;
+    
+    transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    
+    transform: translateX(-50%) translateY(-50%) translateZ(0px);
+    
+    opacity: 0;
+    
+    }
+    
+    
+    .comments-for-name {
+    
+    font-size: 1rem;
+    
+    font-family: AvenirNext-Regular;
+    
+    padding-top: -26px;
+    
+    }
+    
+    
+    
+    
+    #play, #pause {
+    
+    // border: 1px solid snow;
+    
+    position: absolute;
+    
+    width: 20px;
+    
+    height: 20px;
+    
+    left: 30%;
+    
+    top: 50%;
+    
+    transform: translateX(-50%) translateY(-50%);
+    
+    background: transparent;
+    
+    }
+    
+    
+    #reloadList {
+    
+    // border: 1px solid snow;
+    
+    position: absolute;
+    
+    width: 25px;
+    
+    height: 25px;
+    
+    left: 70%;
+    
+    top: 50%;
+    
+    transform: translateX(-50%) translateY(-50%);
+    
+    background: transparent;
+    
+    }
