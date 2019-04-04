@@ -12,6 +12,7 @@
   "dependencies": {
     "bcrypt": "^3.0.5",
     "config": "^3.0.1",
+    "cookie-parser": "^1.4.4",
     "ejs": "^2.6.1",
     "ejs-locals": "^1.0.2",
     "express": "^4.16.4",

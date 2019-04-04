@@ -1,3 +1,89 @@
 <% layout('layout/page') -%>
 
-<div id='container'></div>
+<!-- preloader starts -->
+
+  
+
+<div id='preloader'>
+
+    <p class='preloader-text'>'Молитва друг о друге есть лучшее из общений'</br></br><em class='preloader-text-athor'>свят. Филарет Московский</em>
+  
+    </p>
+  
+    <span class='btn'>продолжить</span>
+  
+   </div>
+  
+  
+  
+  <!-- preloader finished -->
+  
+  
+   <div id='container'>
+  
+    <p>  Дорогой гость, чтобы создавать, редактировать и просматривать синодики необходимо создать свою учетную запись, заполнив форму:</p>
+  
+  
+  <form id='regForm' action='/api/users' method='post'>
+  
+    <p>
+  
+      <label>Имя</label>
+  
+      <input id='nameInput' type='text' name='name' required />
+  
+    </p>
+  
+  
+    <p>
+  
+      <label>Email</label>
+  
+      <input type='email' name='email' required />
+  
+    </p>
+  
+  
+    <p>
+  
+      <label>Пароль</label>
+  
+      <input type='password' name='password' required />
+  
+    </p>
+  
+   
+  
+    <p>
+  
+      <button class='formBtn'>создать запись</button>
+  
+    </p>
+  
+  </form>
+  
+  
+  
+  <!-- info-circle example 
+  
+  
+  <div class='infoCircle'>
+  
+    <div class='infoCircle-fon'></div>
+  
+     <div class='infoCircle-mark'>
+  
+       
+  
+     </div>
+  
+  </div>
+  
+  
+  info-circle example end -->
+  
+  
+  
+  
+  
+  </div>  

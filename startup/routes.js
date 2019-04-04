@@ -1,5 +1,5 @@
 const express = require('express'),
-        path =require('path'),
+        index = require('../routes/index'),
         users = require('../routes/users'),
         genres = require('../routes/genres'),
         customers = require('../routes/customers'),
@@ -8,8 +8,7 @@ const express = require('express'),
         rentals = require('../routes/rentals');
 
 module.exports = function(app) {
-    app.use(express.json());
-    app.use(express.static(path.join(__dirname, 'public')));
+    app.use('/', index);
     app.use('/api/genres', genres);
     app.use('/api/customers', customers);
     app.use('/api/movies', movies);
