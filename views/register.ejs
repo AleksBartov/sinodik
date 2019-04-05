@@ -1,0 +1,23 @@
+<% layout('layout/page') -%>
+
+<div class="container">
+    <h1 class="registerTitle">регистрация</h1>
+
+    <form id='regForm' action='/users' method='post'>
+        <p>
+          <label>Имя</label>
+          <input id='nameInput' type='text' name='name' required />
+        </p>
+        <p>
+          <label>Email</label>
+          <input type='email' name='email' required />
+        </p>
+        <p>
+          <label>Пароль</label>
+          <input type='password' name='password' required />
+        </p>
+        <p>
+          <button class='formBtn'>создать запись</button>
+        </p>
+      </form>
+</div>

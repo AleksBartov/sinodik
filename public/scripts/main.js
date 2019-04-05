@@ -1,7 +1,6 @@
 const preloaderText = document.querySelector('.preloader-text');
-
-
 const btn = document.querySelector('.btn');
+const container = document.querySelector('.container');
 
 
 
