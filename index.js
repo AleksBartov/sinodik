@@ -1,13 +1,15 @@
 const path = require('path');
 const winston = require('winston');
-const cookieParser = require('cookie-parser');
+const expressSession = require('express-session');
 const express = require('express');
 const app = express();
 
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(cookieParser());
+app.use(expressSession({
+    secret: 'secret'
+}))
 app.use(express.static(path.join(__dirname, 'public')));
 require('./startup/logging');
 require('./startup/routes')(app);

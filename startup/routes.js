@@ -18,5 +18,5 @@ module.exports = function(app) {
     app.use('/api/movies', movies);
     app.use('/api/rentals', rentals);
     app.use('/users', users);
-    app.use('/api/auth', auth);
+    app.use('/auth', auth);
 }

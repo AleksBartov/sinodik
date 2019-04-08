@@ -1,19 +1,26 @@
 /* colors:
 
-  #D9D9D9; - lightGray
+  var(--myGray); - lightGray
 
-  #4d4d4d; - deepGray
+  var(--myGray); - deepGray
 
-  #666666; - myGray
+  var(--myBlack); - myGray
 
   #b3b3b3; - midleGray
 
-  #ffffff; - activeWhite
+  var(--myWhite); - activeWhite
 
   #FFD134; - yellowInfo
 
 
 */
+
+:root {
+  --myBlue: #0077ff;
+  --myGray: #b2b2b2;
+  --myBlack: #000000;
+  --myWhite: #f2f2f2;
+}
 
 
 html {
@@ -24,7 +31,7 @@ html {
 
   min-height: 100%;
 
-  background-color: #666666;
+  background-color: var(--myBlack);
 
 }
 
@@ -37,7 +44,7 @@ html {
 
   box-sizing: inherit;
 
-  background-color: #666666;
+  background-color: var(--myBlack);
 
 }
 
@@ -59,9 +66,9 @@ body {
 
   height: 100%;
 
-  background-color: #666666;
+  background-color: var(--myBlack);
 
-  color: #ffffff;
+  color: var(--myWhite);
 
   font-family: AvenirNext-DemiBold;
 
@@ -104,7 +111,7 @@ input {
 a {
   text-decoration: none;
   background: transparent;
-  color: #ffffff;
+  color: var(--myWhite);
 }
 
 
@@ -169,7 +176,7 @@ a {
 
   padding: 7px 20px;
 
-  border: 1px solid #ffffff;
+  border: 1px solid var(--myWhite);
 
   position: absolute;
 
@@ -194,7 +201,7 @@ header {
 
  height: 50px;
 
- background: #4d4d4d;
+ background: var(--myGray);
 
  z-index: 5;
 
@@ -215,16 +222,16 @@ header {
 }
 
 
-#regForm, #regForm > p, #regForm > p > * {
+.regForm, .regForm > p, .regForm > p > * {
 
-  background: #d9d9d9;
+  background: var(--myGray);
 
   color: black;
 
 }
 
 
-#regForm {
+.regForm {
 
   margin-top: 30px;
 
@@ -248,7 +255,7 @@ p {
 
 .formBtn {
 
-    color: #ffffff;
+    color: var(--myWhite);
 
     border: 5px solid white; 
 
@@ -272,7 +279,7 @@ p {
 
     padding: 15px;
 
-    background: #666666;
+    background: var(--myBlack);
 
     margin: 0 0 10px 0;
 
@@ -318,7 +325,7 @@ p {
 
 .enterBtn, .registerBtn {
   position: relative;
-  background-color: #4d4d4d;
+  background-color: var(--myGray);
   width: 80%;
   height: 90px;
   text-align: center;
@@ -333,7 +340,7 @@ p {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   background-color: transparent;
-  color: #ffffff;
+  color: var(--myWhite);
 }
 
 .divider {
@@ -342,9 +349,9 @@ p {
   position: relative;
   width: 60%;
   height: 2px;
-  background-color: #d9d9d9;
+  background-color: var(--myGray);
 }
 
 .registerTitle {
-  color: #ffffff;
+  color: var(--myWhite);
 }

@@ -2,4 +2,17 @@
 
 <div class="container">
     <h1>вход</h1>
+    <form class='regForm' action='/auth' method='POST'>
+        <p>
+          <label>Email</label>
+          <input type='email' name='email' required />
+        </p>
+        <p>
+          <label>Пароль</label>
+          <input type='password' name='password' required />
+        </p>
+        <p>
+          <button class='formBtn'>войти</button>
+        </p>
+      </form>
 </div>

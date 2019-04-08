@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const config = require('config');
 const jwt = require('jsonwebtoken');
 
+const Schema = mongoose.Schema;
+
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -23,7 +25,11 @@ const userSchema = new mongoose.Schema({
       minlength: 5,
       maxlength: 1024
     },
-    isAdmin: Boolean
+    isAdmin: Boolean,
+    sinodiks: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Sinodik'
+    }]
 });
 
 userSchema.methods.generateAuthToken = function() {

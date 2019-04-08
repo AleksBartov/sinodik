@@ -17,7 +17,8 @@ router.post('/', async (req, res) => {
     if (!validPassword) return res.status(400).send('некорректные email или пароль');
 
     const token = user.generateAuthToken();
-    res.send(token);
+    req.session.token = token;
+    res.redirect('/users/me');
 });
 
 function validate(req) {

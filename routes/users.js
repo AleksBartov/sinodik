@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.get('/me', auth, async (req, res)=>{
     const user = await User.findById(req.user._id).select('-password');
-    res.send(user);
+    res.render('account', {name: user.name, email: user.email, id: user._id, sinodiks: user.sinodiks});
 });
 
 router.post('/', async (req, res) => {
@@ -24,7 +24,8 @@ router.post('/', async (req, res) => {
     await user.save();
 
     const token = user.generateAuthToken();
-    res.header('x-auth-token', token).render('newCreatedUser', {name: user.name, email: user.email, id: user._id});
+    req.session.token = token;
+    res.render('newCreatedUser', {name: user.name, email: user.email, id: user._id});
 });
 
 module.exports = router;
