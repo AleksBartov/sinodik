@@ -79,6 +79,17 @@ p {
 }
 
 
+.divider {
+
+  margin: 60px 0;
+
+  width: 100%;
+
+  border-bottom: 10px solid rgba(45,45,45,.1);
+
+}
+
+
 
 .active {
 
@@ -232,6 +243,7 @@ footer {
 }
 
 
+
 .sandwich {
 
   z-index: 101;
@@ -352,7 +364,7 @@ footer {
 
 
 
-.hiddenRoom {
+.hiddenRoom, .hiddenEnter {
 
   z-index: 150;
 
@@ -377,6 +389,7 @@ footer {
   background-color: #EBE5D6;
 
 }
+
 
 
 .openedRoom {
@@ -494,6 +507,40 @@ footer {
 
 
 
+.areYouRegistred {
+
+  font-size: .8rem;
+
+  margin-bottom: 30px;
+
+  color:  #00515f;
+
+  position: absolute;
+
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  left: 50%;
+
+  width: 100%;
+
+}
+
+
+.areYouRegistred span {
+
+  padding: 5px;
+
+  border: 2px solid #00515f;
+
+  font-size: 1.2rem;
+
+  border-radius: 5px;
+
+}
+
+
 .hiddenFormItem {
 
   transform: translateY(100%) scale(.9);
@@ -553,100 +600,145 @@ footer {
 
 .logoContainer svg path:nth-child(1) {
 
-  stroke-dasharray: 185;
+  stroke-dasharray: 1632.12;
 
-  stroke-dashoffset: 185;
+  stroke-dashoffset: 1632.12;
 
-  animation: line-anim 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards .8s;
+  animation: line-anim 3s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards .8s;
 
 }
 
 
 .logoContainer svg path:nth-child(2) {
 
-  stroke-dasharray: 12;
+  stroke-dasharray: 1000;
 
-  stroke-dashoffset: 12;
+  stroke-dashoffset: 1000;
 
-  animation: line-anim 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards 1.8s;
+  animation: line-anim 3s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards .8s;
 
 }
 
 
 .logoContainer svg path:nth-child(3) {
 
-  stroke-dasharray: 21.2;
+  stroke-dasharray: 1159;
 
-  stroke-dashoffset: 21.2;
+  stroke-dashoffset: 1159;
 
-  animation: line-anim .8s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards 3.5s;
+  animation: line-anim 4.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards .8s;
 
 }
 
 
-
 .logoContainer svg path:nth-child(4) {
 
-  stroke-dasharray: 52.5;
+  stroke-dasharray: 162.5;
 
-  stroke-dashoffset: 52.5;
+  stroke-dashoffset: 162.5;
 
-  animation: line-anim 1.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards 1.8s;
+  animation: line-anim 4.9s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards .8s;
 
 }
 
 
 .logoContainer svg path:nth-child(5) {
 
-  stroke-dasharray: 91.2;
+  stroke-dasharray: 304.3;
 
-  stroke-dashoffset: 91.2;
+  stroke-dashoffset: 304.3;
 
-  animation: line-anim 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+  animation: line-anim 3.1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards .8s;
 
 }
 
 
 .logoContainer svg path:nth-child(6) {
 
-  stroke-dasharray: 20;
+  stroke-dasharray: 880.1;
 
-  stroke-dashoffset: 20;
+  stroke-dashoffset: 880.1;
 
-  animation: line-anim 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards .5s;
+  animation: line-anim 4.1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards .8s;
 
 }
 
 
 .logoContainer svg path:nth-child(7) {
 
-  stroke-dasharray: 95;
+  stroke-dasharray: 273.14;
 
-  stroke-dashoffset: 95;
+  stroke-dashoffset: 273.14;
 
-  animation: line-anim .8s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards 1.5s;
+  animation: line-anim 3.1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards .8s;
 
 }
-
 
 
 .logoContainer svg path:nth-child(8) {
 
-  stroke-dasharray: 20;
+  stroke-dasharray: 398.23;
 
-  stroke-dashoffset: 20;
+  stroke-dashoffset: 398.23;
 
-  animation: line-anim 1.6s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards .9s;
+  animation: line-anim 3.1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards .8s;
+
+}
+
+
+.logoContainer svg path:nth-child(9) {
+
+  stroke-dasharray: 309.43;
+
+  stroke-dashoffset: 309.43;
+
+  animation: line-anim 3.1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards .8s;
+
+}
+
+
+.logoContainer {
+
+  margin-top: 160px;
+
+  width: 90%;
 
 }
 
 
 
-.logoContainer {
+#iPhoneXSVG path:nth-child(1) {
 
-  margin-top: 180px;
+  stroke-dasharray: 558.84;
 
-  width: 70%;
+  stroke-dashoffset: 558.84;
+
+}
+
+
+#iPhoneXSVG path:nth-child(2) {
+
+  stroke-dasharray: 548.55;
+
+  stroke-dashoffset: 548.55;
+
+}
+
+
+#iPhoneXSVG path:nth-child(3) {
+
+  stroke-dasharray: 45.43;
+
+  stroke-dashoffset: 45.43;
+
+}
+
+
+#iPhoneXSVG path:nth-child(4) {
+
+  stroke-dasharray: 53.6;
+
+  stroke-dashoffset: 53.6;
 
 }
 
@@ -688,6 +780,72 @@ footer {
   color: #c2d49b;
 
 }
+
+
+
+
+.mainIphHolder {
+
+  overflow-x: hidden;
+
+  perspective: 600px;
+
+  transform-style: preserve-3d;
+
+}
+
+
+
+.iphoneHolder {
+
+  position: relative;
+
+  height: 320px;
+
+  transform-style: inherit;
+
+  transform: translateZ(-50px) rotateY(45deg) rotateX(30deg);
+
+}
+
+
+.iphoneShow {
+
+  animation: line-anim 3.1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+
+}
+
+
+
+.iphoneHolder svg:nth-child(1) {
+
+  position: absolute;
+
+}
+
+
+.iphoneHolder svg:nth-child(2) {
+
+  position: absolute;
+
+  transform-origin: 100% 0;
+
+  transform: rotateY(-90deg);
+
+}
+
+
+
+
+.iphoneText {
+
+  font-size: .6rem;
+
+  opacity: 0;
+
+}
+
+
 
 
 @keyframes line-anim {

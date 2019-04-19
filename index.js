@@ -3,14 +3,16 @@ const winston = require('winston');
 const expressSession = require('express-session');
 const express = require('express');
 const app = express();
+const cookiParser = require('cookie-parser');
 
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+app.use(cookiParser());
 app.use(expressSession({
     secret: 'secret'
 }))
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 require('./startup/logging');
 require('./startup/routes')(app);
 require('./startup/db')();

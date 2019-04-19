@@ -1,13 +1,9 @@
-//alert('i am here');
-
-
 // --gettingCorrentPathLength---
 
-console.log(document.querySelectorAll('.logoContainer path')[5].getTotalLength());
+console.log(document.querySelectorAll('#iPhoneXSVG path')[0].getTotalLength());
 
 
-
-// ---hiddenMenuOpenning-------
+// constants variables --------
 
 
 const sandwich = document.querySelector('.sandwich'),
@@ -16,10 +12,40 @@ sandwichItems = document.querySelectorAll('.sandwich_item'),
 
 hM = document.querySelector('.hiddenMenu'),
 
-hiddenMenuLinks = document.querySelectorAll('.hiddenMenu-link');
+hiddenMenuLinks = document.querySelectorAll('.hiddenMenu-link'),
+
+room = document.querySelector('.personRoom'),
+
+hiddenRoom = document.querySelector('.hiddenRoom'),
+
+hiddenEnter = document.querySelector('.hiddenEnter'),
+
+arrowRegisterBack = document.querySelectorAll('.registerHeaderTitle svg'),
+
+linkToRegModal = document.querySelector('.linkToRegModal'),
+
+footerRegLink = document.querySelector('.footerRegLink'),
+
+footerEnterLink = document.querySelector('.footerEnterLink'),
+
+linkFromRegToEnter = document.querySelector('.linkFromRegToEnter'),
+
+hiddenFormItems = document.querySelectorAll('.hiddenFormItem');
 
 
-let menuOpened = false;
+
+
+let menuOpened = false,
+
+formOpened = false,
+
+enterFormOpened = false;
+
+
+
+// ---hiddenMenuOpenning-------
+
+
 
 
 sandwich.addEventListener('click', ()=>{
@@ -32,7 +58,7 @@ hM.classList.toggle('openedMenu');
 
 Array.from(sandwichItems).forEach((i, index)=>{
 
-i.classList.toggle(`opened_${index}`);
+  i.classList.toggle(`opened_${index}`);
 
 })
 
@@ -41,7 +67,7 @@ i.classList.toggle(`opened_${index}`);
 
 hM.addEventListener('touchmove', (e)=>{
 
-e.preventDefault();
+ e.preventDefault();
 
 }, false);
 
@@ -65,7 +91,7 @@ hiddenMenuLinks[0].classList.remove('linkToView');
 
 hiddenMenuLinks[0].addEventListener('transitionend', ()=>{
 
-
+  
 
 if (menuOpened){
 
@@ -91,18 +117,41 @@ hM.classList.toggle('openedMenu');
 
 Array.from(sandwichItems).forEach((i, index)=>{
 
-i.classList.toggle(`opened_${index}`);
+  i.classList.toggle(`opened_${index}`);
 
 })
 
 
 formOpened = true;
 
-hiddenRoom.classList.add('openedRoom');
+  hiddenRoom.classList.add('openedRoom');
 
 
 }, true);
 
+
+
+hiddenMenuLinks[1].addEventListener('click', ()=>{
+
+
+menuOpened = !menuOpened;
+
+hM.classList.toggle('openedMenu');
+
+
+Array.from(sandwichItems).forEach((i, index)=>{
+
+  i.classList.toggle(`opened_${index}`);
+
+})
+
+
+enterFormOpened = true;
+
+  hiddenEnter.classList.add('openedRoom');
+
+
+}, true);
 
 
 
@@ -114,26 +163,8 @@ hiddenRoom.classList.add('openedRoom');
 
 
 
-
-
-
 // ----personRoomOpenning------
 
-
-
-const room = document.querySelector('.personRoom'),
-
-hiddenRoom = document.querySelector('.hiddenRoom'),
-
-arrowRegisterBack = document.querySelector('.registerHeaderTitle svg'),
-
-linkToRegModal = document.querySelector('.linkToRegModal'),
-
-hiddenFormItems = document.querySelectorAll('.hiddenFormItem');
-
-
-
-let formOpened = false;
 
 
 room.addEventListener('click', ()=>{
@@ -141,7 +172,7 @@ room.addEventListener('click', ()=>{
 
 formOpened = true;
 
-hiddenRoom.classList.add('openedRoom');
+  hiddenRoom.classList.add('openedRoom');
 
 }, true);
 
@@ -149,7 +180,7 @@ hiddenRoom.classList.add('openedRoom');
 
 hiddenRoom.addEventListener('touchmove', (e)=>{
 
-e.preventDefault();
+ e.preventDefault();
 
 }, false);
 
@@ -160,9 +191,46 @@ linkToRegModal.addEventListener('click', ()=>{
 
 formOpened = true;
 
-hiddenRoom.classList.add('openedRoom');
+  hiddenRoom.classList.add('openedRoom');
 
 }, true);
+
+
+
+footerRegLink.addEventListener('click', ()=>{
+
+
+formOpened = true;
+
+  hiddenRoom.classList.add('openedRoom');
+
+}, true);
+
+
+
+footerEnterLink.addEventListener('click', ()=>{
+
+
+enterFormOpened = true;
+
+  hiddenEnter.classList.add('openedRoom');
+
+}, true);
+
+
+
+linkFromRegToEnter.addEventListener('click', ()=>{
+
+
+formOpened = true;
+
+enterFormOpened = true;
+
+  hiddenEnter.classList.add('openedRoom');
+
+}, true);
+
+
 
 
 
@@ -259,14 +327,89 @@ hiddenFormItems[5].classList.remove('linkToView');
 
 
 
-arrowRegisterBack.addEventListener('click', ()=>{
 
-formOpened = false;
+hiddenEnter.addEventListener('transitionend', ()=>{
 
-hiddenRoom.classList.remove('openedRoom');
+if (enterFormOpened){
+
+hiddenFormItems[6].classList.add('linkToView');
+
+}else{
+
+hiddenFormItems[6].classList.remove('linkToView');
+
+}
 
 }, true);
 
+
+hiddenFormItems[6].addEventListener('transitionend', ()=>{
+
+if (enterFormOpened){
+
+hiddenFormItems[7].classList.add('linkToView');
+
+}else{
+
+hiddenFormItems[7].classList.remove('linkToView');
+
+}
+
+}, true);
+
+
+hiddenFormItems[7].addEventListener('transitionend', ()=>{
+
+if (enterFormOpened){
+
+hiddenFormItems[8].classList.add('linkToView');
+
+}else{
+
+hiddenFormItems[8].classList.remove('linkToView');
+
+}
+
+}, true);
+
+
+hiddenFormItems[8].addEventListener('transitionend', ()=>{
+
+if (enterFormOpened){
+
+hiddenFormItems[9].classList.add('linkToView');
+
+}else{
+
+hiddenFormItems[9].classList.remove('linkToView');
+
+}
+
+}, true);
+
+
+
+
+
+
+arrowRegisterBack[0].addEventListener('click', ()=>{
+
+formOpened = false;
+
+  hiddenRoom.classList.remove('openedRoom');
+
+}, true);
+
+
+arrowRegisterBack[1].addEventListener('click', ()=>{
+
+formOpened = false;
+
+  hiddenRoom.classList.remove('openedRoom');
+
+hiddenEnter.classList.remove('openedRoom');
+
+}, true);
 
 
 
@@ -288,26 +431,46 @@ hiddenRoom.classList.remove('openedRoom');
 
 const paragrafs = document.querySelectorAll('p');
 
+const iphoneHolder = document.querySelector('.iphoneHolder');
+
+const iPhonePaths = document.querySelectorAll('#iPhoneXSVG path');
+
 
 function checkSlide(e) {
 
 
-Array.from(paragrafs).forEach(p=>{
+
+const slideInAt = (window.scrollY + window.innerHeight) - iphoneHolder.scrollHeight/2;
+
+    const pBottom = iphoneHolder.offsetTop + iphoneHolder.scrollHeight;
+
+    const isHalfShown = slideInAt > iphoneHolder.offsetTop;
+
+    const isNotScrolledPast = window.scrollY < pBottom;
 
 
-  const slideInAt = (window.scrollY + window.innerHeight) - p.scrollHeight/2;
+    if(isHalfShown && isNotScrolledPast) Array.from(iPhonePaths).forEach(path => {path.classList.add('iphoneShow');
 
-  const pBottom = p.offsetTop + p.scrollHeight;
-
-  const isHalfShown = slideInAt > p.offsetTop;
-
-  const isNotScrolledPast = window.scrollY < pBottom;
+});
 
 
-//console.log(p.height);
+
+Array.from(paragrafs).forEach(p => {
 
 
-  if(isHalfShown && isNotScrolledPast) p.classList.add('active')
+    const slideInAt = (window.scrollY + window.innerHeight) - p.scrollHeight/2;
+
+    const pBottom = p.offsetTop + p.scrollHeight;
+
+    const isHalfShown = slideInAt > p.offsetTop;
+
+    const isNotScrolledPast = window.scrollY < pBottom;
+
+
+  //console.log(p.height);
+
+
+    if(isHalfShown && isNotScrolledPast) p.classList.add('active')
 
 });
 
@@ -319,29 +482,29 @@ window.addEventListener('scroll', debounce(checkSlide), true);
 
 function debounce(func, wait = 20, immediate = true) {
 
-var timeout;
+  var timeout;
 
-return function() {
+  return function() {
 
-  var context = this, args = arguments;
+    var context = this, args = arguments;
 
-  var later = function() {
+    var later = function() {
 
-    timeout = null;
+      timeout = null;
 
-    if(!immediate) func.apply(context, args);
+      if(!immediate) func.apply(context, args);
+
+    };
+
+    var callNow = immediate && !timeout;
+
+    clearTimeout(timeout);
+
+    timeout = setTimeout(later, wait);
+
+    if(callNow) func.apply(context, args);
 
   };
-
-  var callNow = immediate && !timeout;
-
-  clearTimeout(timeout);
-
-  timeout = setTimeout(later, wait);
-
-  if(callNow) func.apply(context, args);
-
-};
 
 };
 
@@ -350,3 +513,4 @@ return function() {
 
 
 // ---EndParagfafAppierCode-----
+
