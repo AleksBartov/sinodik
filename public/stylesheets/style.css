@@ -37,6 +37,8 @@ body {
 
   //opacity: 0;
 
+  
+
   background: #00515f;
 
   //border: 2px solid red;
@@ -79,6 +81,8 @@ p {
 }
 
 
+
+
 .divider {
 
   margin: 60px 0;
@@ -86,6 +90,119 @@ p {
   width: 100%;
 
   border-bottom: 10px solid rgba(45,45,45,.1);
+
+}
+
+
+
+.aboutSinodiks {
+
+  width: 100%;
+
+  position: relative;
+
+  margin: 100px 0 30px 0;
+
+  //border: 1px solid snow;
+
+}
+
+
+.aboutSinodiks p{
+
+  opacity: 1;
+
+  color: #c2d49b;
+
+  //margin: 0;
+
+  //padding: 0;
+
+  transform: translateY(0%);
+
+}
+
+
+.twoCardsHolder {
+
+  width: 100%;
+
+  background: rgba(45,45,45,.1);
+
+  height: 70vh;
+
+  position: relative;
+
+  margin: 10px 0 10px 0;
+
+  //border: 1px solid snow;
+
+  overflow-x: hidden;
+
+  overflow-y: hidden;
+
+  perspective: 600px;
+
+  transform-style: preserve-3d;
+
+}
+
+
+.twoCardsHolder div {
+
+  transform-style: inherit;
+
+  background: #00515f;
+
+  width: 50vw;
+
+  height: 50vh;
+
+  border: 1px solid #ffffff;
+
+  border-radius: 5px;
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  box-shadow: 0 0 20px rgba(0,0,0,.4);
+
+  transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+
+.oZdravii {
+
+  transform: translateX(-50%) translateY(-50%) translateZ(0px);
+
+  z-index: 400;
+
+  filter: blur(0);
+
+}
+
+
+
+.oUpokoenii {
+
+  transform: translateX(70%) translateY(-50%) translateZ(-150px);
+
+  z-index: 380;
+
+  filter: blur(1px);
+
+}
+
+
+.hideCards {
+
+  filter: blur(3px);
+
+  transform: translateX(180%) translateY(-50%) translateZ(-250px);
 
 }
 
@@ -117,6 +234,94 @@ p {
   text-align: left;
 
   text-indent: 8px;
+
+}
+
+
+.greetingModal {
+
+  //opacity: 0;
+
+  background: #ffffff;
+
+  position: fixed;
+
+  z-index: 250;
+
+  width: 80vw;
+
+  height: 80vh;
+
+  top: 50%;
+
+  left: 50%;
+
+  text-align: center;
+
+  transform: translate(-50%, -50%) scale(0);
+
+  border-radius: 5px;
+
+  transition: all .6s cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+
+.greetingModal-opened {
+
+  //opacity: 1;
+
+  filter: blur(0px);
+
+  transform: translate(-50%, -50%) scale(1);
+
+}
+
+
+.greetingModal > div {
+
+  position: relative;
+
+  //border: 1px solid black;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+.greetingModal div:nth-child(1) {
+
+  height: 20%;
+
+  float: right;
+
+}
+
+
+.greetingModal div:nth-child(2) {
+
+  height: 60%;
+
+  padding: 20px;
+
+  font-size: 1.4rem;
+
+  clear: both;
+
+}
+
+
+.greetingModal div:nth-child(3) span {
+
+  padding: 1px 25px;
+
+  border: 2px solid #00515f;
+
+  font-size: 1.4rem;
+
+  border-radius: 5px;
 
 }
 
@@ -167,6 +372,19 @@ header > * {
   //border: 1px solid #ffffff;
 
 }
+
+
+
+.userTitleName > *{
+
+  font-size: 1.4rem;
+
+  position: absolute;
+
+  transform: translateX(-50%) translateY(65%);
+
+}
+
 
 
 footer {
@@ -844,6 +1062,9 @@ footer {
   opacity: 0;
 
 }
+
+
+
 
 
 

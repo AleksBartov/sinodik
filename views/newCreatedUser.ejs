@@ -1,4 +1,215 @@
 <% layout('layout/page') -%>
 
+<header>
+
+    
+
+
+    <!-- ----hiddenMenu-------- -->
+    
+    
+    <div class='hiddenMenu'>
+    
+     <div class='logoAsBackground'>
+    
+    <svg width='100vw' viewBox='0 0 100 100'>
+    
+      <g fill="transparent" stroke="rgba(45,45,45,.1)" stroke-width="2px" stroke-linejoin="round" stroke-linecap="round">
+    
+              <path d="M49.75,90.5 A 40.5 40.5 0 1 1 50 90.5" />
+    
+              <path d="M48,20 V25 H43 M43,29 H48 V34 H26 M26,38 H48 V63 L43,60 M43,65 L48,68 V86 A 36 36 0 1 1 52 86 V69.5 L57,72.5 M57,67.5 L52,64.5 V38 H74 M74,34 H52 V29 H57 M57,25 H52 V20" />
+    
+            </g>
+    
+          </svg>
+    
+        </div>
+    
+     <div class='hiddenMenu-links-holder'>
+    
+      <span class='hiddenMenu-link'>создать синодик</span>
+    
+      <span class='hiddenMenu-link'>добавить имя</span>
+    
+    </div>
+    
+    </div>
+    
+    
+    <!-- ----hiddenMenu end----- -->
+    
+    
+    
+        <div class='sandwich'>
+    
+         <div class='sandwich_item sandwich_item_1'></div>
+    
+         <div class='sandwich_item sandwich_item_2'></div>
+    
+         <div class='sandwich_item sandwich_item_3'></div>
+    
+        </div>
+    
+    
+        <div class='userTitleName'>
+    
+         <span><%= name %></span>
+    
+        </div>
+    
+    
+        <div class='listSinodiksIcon'>
+    
+          <svg width='70' height='70' viewPort='0 0 70 70'>
+    
+        <g stroke='#c2d49b' stroke-width='1px' fill='transparent'>
+    
+      <path d='M30,12 H43 A 5 5 0 0 1 48,17 V53 A 5 5 0 0 1 43,58 H27 A 5 5 0 0 1 22,53 V17 A 5 5 0 0 1 27,12z
+    
+    
+    M35,14 V18 M33,16 H37
+    
+    
+    M27,24 H43
+    
+    
+    M27,28 H43
+    
+    
+    M27,32 H43
+    
+    
+    M27,36 H43
+    
+    
+    M27,40 H43
+    
+    
+    M27,44 H43
+    
+    
+    M27,48 H43
+    
+    
+    M27,52 H43
+    
+    ' />
+    
+    
+    
+    <text x='40' y='59' fill='#ffffff' style='font-size: 1.5rem' stroke='#ffffff'>0</text>
+    
+      </g>
+    
+      </svg>
+    
+        </div>
+    
+    
+      </header>
+    
+    
+    <!-- ----------header--end--- -->
+    
+    
+    <!-- greeting modal start -- -->
+    
+    
+    <div class='greetingModal'>
+    
+      <div class='greetingModal-cross'>
+    
+        <svg width='40' height='40' viewPort='0 0 40 40'>
+    
+        <g stroke='#00515f' stroke-width='2px' fill='transparent'>
+    
+        <circle cx='20' cy='20' r='14' />
+    
+      <path d='M15,15 L25,25 M25,15 L15,25' />
+    
+      </g>
+    
+      </svg>
+    
+      </div>
+    
+      <div class='greetingModal-message'>
+    
+        <span><%= name %>, </span>вы успешно зарегистрировались и теперь можете создавать синодики
+    
+      </div>
+    
+      <div class='greetingModal-btn'>
+    
+        <span>понятно</span>
+    
+      </div>
+    
+    </div>
+    
+    
+    
+    <!-- greeting modal end -- -->
+    
+    
+    
+    <div class='aboutSinodiks'>
+    
+      <p>Ниже вы можете выбрать какой синодик создать - "о здравии" ( за живых ) или "о упокоении" ( за умерших ), а также присвоить ему название ( например: "близкие родственники" или "основной" и т.п.)</p>
+    
+    </div>
+    
+    
+    <div class='twoCardsHolder'>
+    
+      <div class='oZdravii hideCards'></div>
+    
+      <div class='oUpokoenii hideCards'></div>
+    
+    </div>
+    
+    
+    
+    <footer>
+    
+      <div class='logoAsBackground'>
+    
+    <svg width='100vw' viewBox='0 0 100 100'>
+    
+      <g fill="transparent" stroke="rgba(45,45,45,.1)" stroke-width="2px" stroke-linejoin="round" stroke-linecap="round">
+    
+              <path d="M49.75,90.5 A 40.5 40.5 0 1 1 50 90.5" />
+    
+              <path d="M48,20 V25 H43 M43,29 H48 V34 H26 M26,38 H48 V63 L43,60 M43,65 L48,68 V86 A 36 36 0 1 1 52 86 V69.5 L57,72.5 M57,67.5 L52,64.5 V38 H74 M74,34 H52 V29 H57 M57,25 H52 V20" />
+    
+            </g>
+    
+          </svg>
+    
+        </div>
+    
+        <div class='footerLinksHolder'>
+    
+      <span class='footerTitle'>МОИ СИНОДИКИ</span>
+    
+       <svg width='140' viewBox='0 0 140 20'>
+    
+      <g fill="transparent" stroke="#c2d49b" stroke-width="1px" stroke-linejoin="round" stroke-linecap="round">
+    
+              <path d="M5,10 H135" />
+    
+            </g>
+    
+          </svg>
+    
+    
+    <span class='footerConnect'>обратная связь: aleksandrbartov@yandex.ru</span>
+    
+    </div>
+    
+        
+    
+    </footer>    
 
 <script src="scripts/newCreatedUser.js"></script>
