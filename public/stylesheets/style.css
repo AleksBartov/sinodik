@@ -154,11 +154,11 @@ p {
 
   background: #00515f;
 
-  width: 50vw;
+  width: 60vw;
 
-  height: 50vh;
+  height: 60vh;
 
-  border: 1px solid #ffffff;
+  // border: 1px solid #c2d49b;
 
   border-radius: 5px;
 
@@ -168,7 +168,7 @@ p {
 
   left: 50%;
 
-  box-shadow: 0 0 20px rgba(0,0,0,.4);
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
 
   transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
 
@@ -194,6 +194,24 @@ p {
   z-index: 380;
 
   filter: blur(1px);
+
+}
+
+
+.toLeft {
+
+  z-index: 380;
+
+  filter: blur(1px);
+
+}
+
+
+.toCenter {
+
+  z-index: 400;
+
+  filter: blur(0px);
 
 }
 
@@ -665,6 +683,7 @@ footer {
 }
 
 
+
 .registerFormHolder {
 
   text-align: center;
@@ -1065,6 +1084,199 @@ footer {
 
 
 
+.btnCardToCrt {
+
+  width: 70%;
+
+  text-align: center;
+
+  position: absolute;
+
+  bottom: 0;
+
+  // z-index: 1000;
+
+  left: 50%;
+
+  padding: 4px 10px;
+
+  margin-bottom: 10px;
+
+  transform: translateX(-50%);
+
+  color: #ffffff;
+
+  border: 1px solid #c2d49b;
+
+  border-radius: 5px;
+
+  // background: rgba(45,45,45,.4);
+
+}
+
+
+.inputCardToCrt {
+
+  width: 90%;
+
+  text-align: center;
+
+  position: absolute;
+
+  top: 50%;
+
+  border: none;
+
+  border-radius: none;
+
+  background: transparent;
+
+  border-bottom: 1px solid rgba(45,45,45,.4);
+
+  padding: 0 0 5px 0;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: #ffffff;
+
+  font-size: 1.1rem;
+
+}
+
+
+
+.titleCardToCrt {
+
+  width: 90%;
+
+  text-align: center;
+
+  position: absolute;
+
+  padding-top: 10px;
+
+  top: 0;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: #c2d49b;
+
+  font-size: 1.4rem;
+
+  font-family: AvenirNext-DemiBold;
+
+}
+
+
+
+.newCreatedSinodik {
+
+  background: #ffffff;
+
+  position: fixed;
+
+  z-index: 1500;
+
+  width: 100%;
+
+  height: 100%;
+
+  top: 0;
+
+  left: 0;
+
+  bottom: 0;
+
+  right: 0;
+
+  text-align: center;
+
+}
+
+
+
+.nameForSinodikPage {
+
+  position: fixed;
+
+  bottom: 0;
+
+  left: 0;
+
+  text-align: center;
+
+  flex: 1 0 auto;
+
+  align-items: center;
+
+  display: flex;
+
+  font-size: .8rem;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  color: #00515f;
+
+  font-size: .9rem;
+
+  border-top: 1px solid #00515f;
+
+}
+
+
+.nameForSinodikPage span {
+
+  position: relative;
+
+  padding: 5px 5px;
+
+  display: flex;
+
+  //text-align: center;
+
+}
+
+
+.logoForSinodikPage {
+
+  width: 100%;
+
+  text-align: center;
+
+  height: 40px;
+
+  margin-top: 10px;
+
+}
+
+
+.titleForSinodikPage {
+
+  font-size: 1.4rem;
+
+  font-family: AvenirNext-DemiBold;
+
+}
+
+
+.myBlue {
+
+  color: #1cb1ea;
+
+}
+
+
+.myRed {
+
+  color: #ea551c;
+
+}
 
 
 
@@ -1078,3 +1290,4 @@ footer {
   }
 
 }
+
